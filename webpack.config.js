@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: '/'
+    path: path.resolve(__dirname, 'dist')
   },
 
   devtool: 'eval-source-map',
@@ -54,7 +54,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: './index.html',
+      template: './src/index.html',
       filename: 'index.html',
       minify: {
       removeComments: true,
